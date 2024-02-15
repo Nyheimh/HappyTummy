@@ -1,37 +1,52 @@
-import React, { Component } from "react";
-import { styled } from "@mui/material/styles";
-import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+"use client";
+import useState from "react";
+import React from "react";
+
+import {
+  ChakraProvider,
+  Box,
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Heading,
+  Center,
+  Image,
+  Text,
+  Stack,
+} from "@chakra-ui/react";
+import RecipeBadge from "./RecipeBadge";
+import { useEffect } from "react";
+import { FaTiktok } from "react-icons/fa";
 
 export default function RecipeCard() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [tiktokLink, setTiktokLink] = useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  useEffect(() => {
+    setTiktokLink(true);
+  }, []);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader title="Recipe Title" subheader="September 14, 2016" />
-      {/* <CardMedia
-          component="img"
-          height="194"
-          image="/static/images/cards/paella.jpg"
-          alt="Paella dish"
-        /> */}
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing></CardActions>
-    </Card>
+    <ChakraProvider>
+      <Card maxW="sm">
+        <CardBody>
+          <Image
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            alt="Green double couch with wooden legs"
+            borderRadius="lg"
+          />
+          <Stack mt="6" spacing="3">
+            <Heading size="md">Recipe</Heading>
+            <RecipeBadge />
+            <Text>Description of Recipe</Text>
+            <Text color="blue.600" fontSize="2xl">
+              $450
+            </Text>
+            {tiktokLink && <FaTiktok color="#000" size={24} />}
+          </Stack>
+        </CardBody>
+      </Card>
+    </ChakraProvider>
   );
 }

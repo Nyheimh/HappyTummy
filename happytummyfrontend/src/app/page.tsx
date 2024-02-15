@@ -1,12 +1,11 @@
-import NavBar from "./lib/NavBar";
+// import NavBar from "./lib/NavBar";
+"use client";
+import { Link } from "@chakra-ui/next-js";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <NavBar />
-        <h1>hi</h1>
-      </div>
-    </main>
+    <Link href="/about" color="blue.400" _hover={{ color: "blue.500" }}>
+      About
+    </Link>
   );
 }
