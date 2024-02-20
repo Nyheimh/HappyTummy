@@ -85,13 +85,14 @@ export default function RecipeCard() {
             <Stack spacing={4} direction='row' align='center'>
   {(recipe.tiktokLink || recipe.instagramLink) && (
     <>
-      {recipe.tiktokLink && (
-        <a href={recipe.tiktokLink}><FaTiktok color="#000" size={24} /></a>
-      )}
-      {recipe.instagramLink && (
-        <a href={recipe.instagramLink || '/'}><FaInstagram color="#000" size={24} /></a>
-      )}
-    </>
+  {recipe.tiktokLink && (
+    <a href={String(recipe.tiktokLink)}><FaTiktok color="#000" size={24} /></a>
+  )}
+  {recipe.instagramLink && (
+    <a href={String(recipe.instagramLink || '/')}><FaInstagram color="#000" size={24} /></a>
+  )}
+</>
+
   )}
 </Stack>
 
