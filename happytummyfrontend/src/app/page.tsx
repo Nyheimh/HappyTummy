@@ -1,6 +1,6 @@
 // import NavBar from "./lib/NavBar";
 "use client";
-import { Link } from "@chakra-ui/next-js";
+import React from "react";
 import HeroScreen from "./lib/HeroScreen";
 
 export default function Home() {
