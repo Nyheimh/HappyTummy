@@ -1,3 +1,5 @@
+"use client";
+
 import { Container, Stack, Flex, Box, Heading, Text, Image, useColorModeValue } from "@chakra-ui/react";
 import HeroButton from "../ui/HeroButton";
 import Link from "next/link";

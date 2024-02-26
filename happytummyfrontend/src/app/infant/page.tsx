@@ -1,16 +1,33 @@
+// Page.tsx
+"use client"
 import React from "react";
-// import WarningAlert from "../ui/WarningAlert";
 import RecipeCard from "../ui/RecipeCard";
-import { Box } from "@chakra-ui/react";
+import { Box, Input, Stack, SimpleGrid } from "@chakra-ui/react";
+import useRecipeData from "./RecipeData";
 
-type Props = {};
+const Page: React.FC = () => {
+  const { searchFilter, handleSearchInputChange, filteredRecipes } = useRecipeData();
 
-const page = (props: Props) => {
   return (
     <Box>
-      <RecipeCard />
+      <Input
+        type="text"
+        placeholder="Search recipes..."
+        value={searchFilter}
+        onChange={handleSearchInputChange}
+        style={{ display: 'flex', borderRadius: 100, width: 600, left: 400, margin: 10}}
+      />
+<Box style={{ display: 'flex', justifyContent: 'space-evenly',  }}>
+  <Stack spacing="3" direction="row" align="center">
+  <SimpleGrid columns={3} spacing={5}>
+      {filteredRecipes.map((recipe) => (
+        <RecipeCard key={recipe.id} recipe={recipe} />
+        ))}
+         </SimpleGrid>
+        </Stack>
+        </Box>
     </Box>
   );
 };
 
-export default page;
+export default Page;
