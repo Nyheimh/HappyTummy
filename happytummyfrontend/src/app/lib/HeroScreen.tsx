@@ -28,25 +28,23 @@ const HeroScreen = () => {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: 'cyan.400',
+                bg: 'green.400',
                 zIndex: -1,
               } }>
               Happy Tummy
             </Text>
             <br />
-            <Text as={'span'} color={'cyan.400'}>
+            <Text as={'span'} color={'green.400'}>
             Simplicity for Yum
             </Text>
             <Stack spacing={4} direction='row' align='center' marginTop={5}>
               <Link href='/infant' >
-            <HeroButton colorScheme="cyan" size="md" text="Infant" />
+            <HeroButton colorScheme="green" size="md" text="Infant" />
               </Link>
               <Link href='/adult'>
-            <HeroButton  colorScheme="cyan" size="md" text="Adult" />
+            <HeroButton  colorScheme="green" size="md" text="Adult" />
               </Link>
-              <Link href='/beverages'>
-            <HeroButton  colorScheme="cyan" size="md" text="Beverages" />
-              </Link>
+      
             </Stack>
           </Heading>
         </Stack>
@@ -69,9 +67,9 @@ const HeroScreen = () => {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={
-                'https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252_960_720.jpg'
-              }
+              src="
+                /spices.jpg"
+              
             />
           </Box>
         </Flex>

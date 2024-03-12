@@ -60,12 +60,12 @@ const useRecipeData = (): RecipeData => {
       id: 4,
       imageUrl: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
       name: 'Banana French Toast',
-      keyIngredients: 'Banana, Milk/Milk Alternate, Bread',
+      keyIngredients: 'Sweet Potatoe Salmon Cakes',
       tiktokLink: false,
-      instagramLink: 'https://www.instagram.com/reel/C1khlIdMqz-',
+      instagramLink: 'https://www.instagram.com/reel/C3n4oYhyc3_/?igsh=ZDE1MWVjZGVmZQ==',
       badges: [
-        { text: 'Sweet', colorScheme: 'pink' },
-        { text: 'Breakfast', colorScheme: 'yellow' }
+        { text: 'Sweet Potatoe', colorScheme: 'Orange' },
+        { text: 'Salmon', colorScheme: 'pink' }
       ]
     },
     {
@@ -75,6 +75,18 @@ const useRecipeData = (): RecipeData => {
       keyIngredients: 'Banana, Milk/Milk Alternate, Bread',
       tiktokLink: false,
       instagramLink: 'https://www.instagram.com/reel/C1khlIdMqz-',
+      badges: [
+        { text: 'Sweet', colorScheme: 'pink' },
+        { text: 'Breakfast', colorScheme: 'yellow' }
+      ]
+    },
+    {
+      id: 6,
+      imageUrl: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
+      name: 'Banana French Toast',
+      keyIngredients: 'Yogurt Teething Bites',
+      tiktokLink: false,
+      instagramLink: 'https://www.instagram.com/reel/C3EDvAQOsRf/?igsh=ZDE1MWVjZGVmZQ==',
       badges: [
         { text: 'Sweet', colorScheme: 'pink' },
         { text: 'Breakfast', colorScheme: 'yellow' }
