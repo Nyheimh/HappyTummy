@@ -1,81 +1,43 @@
 "use client";
 
-import { Container, Stack, Flex, Box, Heading, Text, Image, useColorModeValue } from "@chakra-ui/react";
+import {
+  Container,
+  Stack,
+  Flex,
+  Box,
+  Heading,
+  Text,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import HeroButton from "../ui/HeroButton";
 import Link from "next/link";
 
-
 const HeroScreen = () => {
   return (
-    <Container maxW={'7xl'}>
-      <Stack
-        align={'center'}
-        spacing={ { base: 8, md: 10 } }
-        py={ { base: 20, md: 28 } }
-        direction={ { base: 'column', md: 'row' } }>
-        <Stack flex={1} spacing={ { base: 5, md: 10 } }>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={ { base: '3xl', sm: '4xl', lg: '6xl' } }>
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={ {
-                content: "''",
-                width: 'full',
-                height: '20%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'green.400',
-                zIndex: -1,
-              } }>
-              Happy Tummy
-            </Text>
-            <br />
-            <Text as={'span'} color={'green.400'}>
-            Simplicity for Yum
-            </Text>
-            <Stack spacing={4} direction='row' align='center' marginTop={5}>
-              <Link href='/infant' >
-            <HeroButton colorScheme="green" size="md" text="Infant" />
-              </Link>
-              <Link href='/adult'>
-            <HeroButton  colorScheme="green" size="md" text="Adult" />
-              </Link>
-      
-            </Stack>
-          </Heading>
-        </Stack>
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
-          <Box
-            position={'relative'}
-            height={'300px'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}>
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src="
-                /spices.jpg"
-              
-            />
-          </Box>
-        </Flex>
+    <div className="h-screen w-full flex flex-col justify-center items-center object-contain">
+      <video
+        className=" w-full h-full fixed z-[-1]"
+        src="/seasoning.mp4"
+        autoPlay
+        loop
+        muted
+      />
+      <h1 className="text-9xl font-sans text-white">Happy Tummy</h1>
+      <p className="text-5xl font-sans text-white m-4">
+        What are you waiting for?
+      </p>
+      <Stack spacing={4} direction="row" align="center" marginTop={5}>
+        <Link href="/infant">
+          <HeroButton colorScheme="green" size="md" text="Infant" />
+        </Link>
+        <Link href="/adult">
+          {" "}
+          <HeroButton colorScheme="green" size="md" text="Adult" />
+        </Link>
       </Stack>
-    </Container>
+    </div>
   );
-}
+};
 
 export default HeroScreen;
