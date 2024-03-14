@@ -1,13 +1,12 @@
-// Page.tsx
-"use client"
+"use client";
 import React from "react";
 import RecipeCard from "../ui/RecipeCard";
 import { Box, Input, Stack, SimpleGrid } from "@chakra-ui/react";
-import useRecipeData from "./RecipeData";
+import useInfantRecipeData from "./InfantRecipeData";
 
 const Page: React.FC = () => {
-  const { searchFilter, handleSearchInputChange, filteredRecipes } = useRecipeData();
-
+  const { searchFilter, handleSearchInputChange, filteredRecipes } =
+    useInfantRecipeData();
   return (
     <Box>
       <Input
@@ -15,17 +14,23 @@ const Page: React.FC = () => {
         placeholder="Search recipes..."
         value={searchFilter}
         onChange={handleSearchInputChange}
-        style={{ display: 'flex', borderRadius: 100, width: 600, left: 400, margin: 10}}
+        style={{
+          display: "flex",
+          borderRadius: 100,
+          width: 600,
+          left: 400,
+          margin: 10,
+        }}
       />
-<Box style={{ display: 'flex', justifyContent: 'space-evenly',  }}>
-  <Stack spacing="3" direction="row" align="center">
-  <SimpleGrid columns={3} spacing={5}>
-      {filteredRecipes.map((recipe) => (
-        <RecipeCard key={recipe.id} recipe={recipe} />
-        ))}
-         </SimpleGrid>
+      <Box style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <Stack spacing="3" direction="row" align="center">
+          <SimpleGrid columns={3} spacing={5}>
+            {filteredRecipes.map((recipe) => (
+              <RecipeCard key={recipe.id} recipe={recipe} />
+            ))}
+          </SimpleGrid>
         </Stack>
-        </Box>
+      </Box>
     </Box>
   );
 };
