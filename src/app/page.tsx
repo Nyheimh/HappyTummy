@@ -6,14 +6,8 @@ import Header from "./lib/Header";
 export default function Home() {
   return (
     <div>
-  
-      {/* <div className="bg-black text-white h-screen"></div> */}
+      <div className="absolute "></div>
       <HeroScreen />
-
-    <HeroScreen />
-    </div>
-    </div>
-   
     </div>
   );
 }

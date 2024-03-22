@@ -3,40 +3,42 @@
 import {
   Container,
   Stack,
-  Flex,
   Box,
-  Heading,
-  Text,
-  Image,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
 import HeroButton from "../ui/HeroButton";
 import Link from "next/link";
 
 const HeroScreen = () => {
   return (
-    <div className="h-screen w-full flex flex-col justify-center items-center object-contain">
+    <Box className="relative content-center">
       <video
-        className=" w-full h-full fixed z-[-1]"
+        className="absolute inset-0"
         src="/seasoning.mp4"
         autoPlay
         loop
         muted
       />
-      <h1 className="text-9xl font-sans text-white">Happy Tummy</h1>
-      <p className="text-5xl font-sans text-white m-4">
-        What are you waiting for?
-      </p>
-      <Stack spacing={4} direction="row" align="center" marginTop={5}>
-        <Link href="/infant">
-          <HeroButton colorScheme="green" size="md" text="Infant" />
-        </Link>
-        <Link href="/adult">
-          {" "}
-          <HeroButton colorScheme="green" size="md" text="Adult" />
-        </Link>
-      </Stack>
-    </div>
+      <Box className="h-screen flex justify-center items-center">
+        <Stack direction="column" align="center" justify="center">
+          <Stack spacing={4} direction="column" align="center" marginTop={10}>
+            <h1 className="text-9xl font-sans text-white z-10">Happy Tummy</h1>
+            <p className="text-5xl font-sans text-white m-4 z-10">
+              What are you waiting for?
+            </p>
+          </Stack>
+          <Stack spacing={4} direction="row" align="center">
+            <Link href="/infant">
+              <Button colorScheme="blackAlpha">Infant Recipes</Button>
+            </Link>
+            <Link href="/adult">
+              <Button colorScheme="blackAlpha">Adult Recipes</Button>
+            </Link>
+          </Stack>
+        </Stack>
+      </Box>
+    </Box>
   );
 };
 
