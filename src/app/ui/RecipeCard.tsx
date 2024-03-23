@@ -55,12 +55,20 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
               <Text>{recipe.keyIngredients}</Text>
               <Stack spacing={4} direction="row" align="center">
                 {typeof recipe.tiktokLink === "string" && (
-                  <a href={String(recipe.tiktokLink)}>
+                  <a
+                    href={String(recipe.tiktokLink)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaTiktok color="#000" size={24} />
                   </a>
                 )}
                 {typeof recipe.instagramLink === "string" && (
-                  <a href={String(recipe.instagramLink || "/")}>
+                  <a
+                    href={String(recipe.instagramLink || "/")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaInstagram color="#000" size={24} />
                   </a>
                 )}
