@@ -216,6 +216,112 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Meat", colorScheme: "brown" },
       ],
     },
+    {
+      id: 15,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Slow Cooker Beef and Broccoli`,
+      keyIngredients: "Beef & Broccoli",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C4_ypRuNKoL/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [
+        { text: "Slow Cooker", colorScheme: "gray" },
+        { text: "Meat", colorScheme: "brown" },
+      ],
+    },
+    {
+      id: 16,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Creamy Garlic Herb Cajun Chicken`,
+      keyIngredients: "Chicken Thighs",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C4NsREYo0pr/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [
+        { text: "Chicken", colorScheme: "gray" },
+        { text: "Dairy", colorScheme: "brown" },
+      ],
+    },
+    {
+      id: 17,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Chocolate Chip Cookies`,
+      keyIngredients: "Chocolate Chip Cookies",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C4tRTrRoZjY/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [
+        { text: "Desserts", colorScheme: "gray" },
+        { text: "Chocolate", colorScheme: "brown" },
+      ],
+    },
+    {
+      id: 18,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Garlic Parmesan Chicken Skewers`,
+      keyIngredients: "Garlic, Parm, Chicken",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C4tRTrRoZjY/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [{ text: "Chicken", colorScheme: "gray" }],
+    },
+    {
+      id: 19,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Out N In`,
+      keyIngredients: "Ground Meat",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C4v449Hv4Oh/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [
+        { text: "Chicken", colorScheme: "gray" },
+        { text: "Fast Food Dupe", colorScheme: "yellow" },
+      ],
+    },
+    {
+      id: 20,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Chipotle's Cilantro Lime Rice`,
+      keyIngredients: "Rice, Cilantro, Lime",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C3vgukPPqXw/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [
+        { text: "Rice", colorScheme: "gray" },
+        { text: "Fast Food Dupe", colorScheme: "yellow" },
+      ],
+    },
+    {
+      id: 21,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Cajun Shrimp Burger`,
+      keyIngredients: "Shrimp",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C30n129pcc_/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [{ text: "Seafood", colorScheme: "blue" }],
+    },
+    {
+      id: 22,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Creamy Chicken and Spinach Wrap`,
+      keyIngredients: "Chicken and Spinach",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C4qVl5COuWx/?igsh=ZDE1MWVjZGVmZQ==",
+      badges: [
+        { text: "Chicken", colorScheme: "gray" },
+        { text: "Veggies", colorScheme: "brown" },
+      ],
+    },
   ]);
 
   const [searchFilter, setSearchFilter] = useState<string>("");

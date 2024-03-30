@@ -42,18 +42,14 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
           />
           <CardBody maxH="491px">
             <Stack spacing="3">
-              <Heading size="md">{recipe.name}</Heading>
-              <Stack direction="row" align="center">
-                {recipe.badges.map((badge, index) => (
-                  <RecipeBadge
-                    key={index}
-                    text={badge.text}
-                    colorScheme={badge.colorScheme}
-                  />
-                ))}
-              </Stack>
-              <Text>{recipe.keyIngredients}</Text>
-              <Stack spacing={4} direction="row" align="center">
+              <Box
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Heading size="md">{recipe.name}</Heading>
                 {typeof recipe.tiktokLink === "string" && (
                   <a
                     href={String(recipe.tiktokLink)}
@@ -72,6 +68,16 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
                     <FaInstagram color="#000" size={24} />
                   </a>
                 )}
+              </Box>
+              <Text>{recipe.keyIngredients}</Text>
+              <Stack direction="row" align="center">
+                {recipe.badges.map((badge, index) => (
+                  <RecipeBadge
+                    key={index}
+                    text={badge.text}
+                    colorScheme={badge.colorScheme}
+                  />
+                ))}
               </Stack>
             </Stack>
           </CardBody>
