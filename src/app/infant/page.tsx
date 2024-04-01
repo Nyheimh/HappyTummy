@@ -15,41 +15,60 @@ const Page: React.FC = () => {
   };
 
   const sortedRecipes = [...filteredRecipes].sort((a, b) => {
-    if (sortOption === "A-Z") {
-      return a.name.localeCompare(b.name);
-    } else {
-      return b.name.localeCompare(a.name);
+    switch (sortOption) {
+      case "A-Z":
+        return a.name.localeCompare(b.name);
+      case "Z-A":
+        return b.name.localeCompare(a.name);
+      case "1-5":
+        return b.rating - a.rating;
+      case "5-1":
+        return a.rating - b.rating;
+
+      default:
+        return a.name.localeCompare(b.name);
     }
   });
+
   return (
     <Box>
-      <Input
-        type="text"
-        placeholder="Search recipes..."
-        value={searchFilter}
-        onChange={handleSearchInputChange}
-        style={{
-          display: "flex",
-          borderRadius: 100,
-          width: 600,
-          left: 400,
-          margin: 10,
-        }}
-      />
-      <Select
-        value={sortOption}
-        onChange={(e) => handelSortChange(e.target.value)}
-        style={{ width: 200, margin: 10 }}
+      <Box
+        display="flex"
+        margin={10}
+        justifyContent="center"
+        justifyItems="space-evenly"
+        alignItems="space-evenly"
+        alignContent="space-evenly"
       >
-        <option value="A-Z"> Alphabetical (A-Z)</option>
-        <option value="Z-A">Alphabetical (Z-A)</option>
-      </Select>
+        <Input
+          type="text"
+          placeholder="Search recipes..."
+          value={searchFilter}
+          onChange={handleSearchInputChange}
+          style={{
+            display: "flex",
+            borderRadius: 100,
+            width: 600,
+            marginRight: 10,
+          }}
+        />
+        <Select
+          width={200}
+          value={sortOption}
+          onChange={(e) => handelSortChange(e.target.value)}
+        >
+          <option value="A-Z"> Alphabetical (A-Z) </option>
+          <option value="Z-A">Alphabetical (Z-A) </option>
+          <option value="5-1">Least Favorite 🥱</option>
+          <option value="1-5">Favorite 😋</option>
+        </Select>
+      </Box>
 
       <Box style={{ display: "flex", justifyContent: "space-evenly" }}>
         <Stack spacing="3" direction="row" align="center">
           <SimpleGrid columns={3} spacing={5}>
-            {sortedRecipes.map((recipe) => (
-              <RecipeCard key={recipe.id} recipe={recipe} />
+            {sortedRecipes.map((infantRecipe) => (
+              <RecipeCard key={infantRecipe.id} recipe={infantRecipe} />
             ))}
           </SimpleGrid>
         </Stack>

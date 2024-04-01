@@ -18,6 +18,8 @@ const Page: React.FC = () => {
     switch (sortOption) {
       case "A-Z":
         return a.name.localeCompare(b.name);
+      case "Z-A":
+        return b.name.localeCompare(a.name);
       case "1-5":
         return b.rating - a.rating;
       case "5-1":
@@ -58,7 +60,7 @@ const Page: React.FC = () => {
         >
           <option value="A-Z"> Alphabetical (A-Z)</option>
           <option value="Z-A">Alphabetical (Z-A)</option>
-          <option value="5-1">Least Favorite 🥱</option>
+          <option value="5-1">Least Favorite</option>
           <option value="1-5">Favorite 😋</option>
         </Select>
       </Box>

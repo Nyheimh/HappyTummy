@@ -1,7 +1,7 @@
 "use client";
 import { useState, ChangeEvent } from "react";
 
-interface Recipe {
+export interface InfantRecipe {
   id: number;
   imageUrl: string;
   name: string;
@@ -9,16 +9,17 @@ interface Recipe {
   tiktokLink: string | undefined;
   instagramLink: string | undefined;
   badges: { text: string; colorScheme: string }[];
+  rating: number;
 }
 
 interface RecipeData {
   searchFilter: string;
   handleSearchInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  filteredRecipes: Recipe[];
+  filteredRecipes: InfantRecipe[];
 }
 
 const useInfantRecipeData = (): RecipeData => {
-  const [recipes] = useState<Recipe[]>([
+  const [recipes] = useState<InfantRecipe[]>([
     {
       id: 1,
       imageUrl:
@@ -31,6 +32,7 @@ const useInfantRecipeData = (): RecipeData => {
         { text: "Veggies", colorScheme: "green" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 2,
@@ -44,6 +46,7 @@ const useInfantRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "gray" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 3,
@@ -57,6 +60,7 @@ const useInfantRecipeData = (): RecipeData => {
         { text: "Sweet", colorScheme: "pink" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 4,
@@ -71,6 +75,7 @@ const useInfantRecipeData = (): RecipeData => {
         { text: "Sweet Potatoe", colorScheme: "Orange" },
         { text: "Salmon", colorScheme: "pink" },
       ],
+      rating: 0,
     },
     {
       id: 5,
@@ -84,6 +89,7 @@ const useInfantRecipeData = (): RecipeData => {
         { text: "Sweet", colorScheme: "pink" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 6,
@@ -98,6 +104,7 @@ const useInfantRecipeData = (): RecipeData => {
         { text: "Sweet", colorScheme: "pink" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
   ]);
 
