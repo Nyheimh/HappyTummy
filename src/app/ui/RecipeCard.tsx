@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import RecipeBadge from "./RecipeBadge";
 import { FaTiktok, FaInstagram } from "react-icons/fa";
+import { StarIcon } from "@chakra-ui/icons";
+import { property } from "lodash";
 
 interface Recipe {
   id: number;
@@ -22,6 +24,7 @@ interface Recipe {
   tiktokLink?: string | undefined;
   instagramLink?: string | undefined;
   badges: { text: string; colorScheme: string }[];
+  rating: number;
 }
 
 interface RecipeCardProps {
@@ -70,6 +73,16 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
                 )}
               </Box>
               <Text>{recipe.keyIngredients}</Text>
+              <Box>
+                {Array(5)
+                  .fill("")
+                  .map((_, i) => (
+                    <StarIcon
+                      key={i}
+                      color={i < recipe.rating ? "teal.500" : "gray.300"}
+                    />
+                  ))}
+              </Box>
               <Stack direction="row" align="center">
                 {recipe.badges.map((badge, index) => (
                   <RecipeBadge

@@ -10,6 +10,7 @@ export interface Recipe {
   tiktokLink: string | undefined;
   instagramLink: string | undefined;
   badges: { text: string; colorScheme: string }[];
+  rating: number;
 }
 
 interface RecipeData {
@@ -33,6 +34,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Airfryer", colorScheme: "brown" },
         { text: "Chicken", colorScheme: "yellow" },
       ],
+      rating: 2,
     },
     {
       id: 2,
@@ -47,6 +49,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dessert", colorScheme: "pink" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 5,
     },
     {
       id: 3,
@@ -61,6 +64,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Chicken", colorScheme: "yellow" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 4,
@@ -75,6 +79,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Fish", colorScheme: "cyan" },
         { text: "Breakfast", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 5,
@@ -89,6 +94,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Chicken", colorScheme: "yellow" },
         { text: "Rice", colorScheme: "orange" },
       ],
+      rating: 0,
     },
     {
       id: 6,
@@ -103,6 +109,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dessert", colorScheme: "pink" },
         { text: "Rice", colorScheme: "orange" },
       ],
+      rating: 0,
     },
     {
       id: 7,
@@ -117,6 +124,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dessert", colorScheme: "pink" },
         { text: "Bread", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 8,
@@ -131,6 +139,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 9,
@@ -145,6 +154,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 10,
@@ -159,6 +169,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 11,
@@ -173,6 +184,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 12,
@@ -187,6 +199,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 13,
@@ -201,6 +214,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 14,
@@ -215,6 +229,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Dairy", colorScheme: "pink" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 15,
@@ -229,6 +244,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Slow Cooker", colorScheme: "gray" },
         { text: "Meat", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 16,
@@ -243,6 +259,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Chicken", colorScheme: "gray" },
         { text: "Dairy", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 17,
@@ -257,6 +274,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Desserts", colorScheme: "gray" },
         { text: "Chocolate", colorScheme: "brown" },
       ],
+      rating: 0,
     },
     {
       id: 18,
@@ -268,6 +286,7 @@ const useAdultRecipeData = (): RecipeData => {
       instagramLink:
         "https://www.instagram.com/reel/C4tRTrRoZjY/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [{ text: "Chicken", colorScheme: "gray" }],
+      rating: 0,
     },
     {
       id: 19,
@@ -282,6 +301,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Chicken", colorScheme: "gray" },
         { text: "Fast Food Dupe", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 20,
@@ -296,6 +316,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Rice", colorScheme: "gray" },
         { text: "Fast Food Dupe", colorScheme: "yellow" },
       ],
+      rating: 0,
     },
     {
       id: 21,
@@ -307,6 +328,7 @@ const useAdultRecipeData = (): RecipeData => {
       instagramLink:
         "https://www.instagram.com/reel/C30n129pcc_/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [{ text: "Seafood", colorScheme: "blue" }],
+      rating: 0,
     },
     {
       id: 22,
@@ -321,6 +343,7 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Chicken", colorScheme: "gray" },
         { text: "Veggies", colorScheme: "brown" },
       ],
+      rating: 0,
     },
   ]);
 
