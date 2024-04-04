@@ -14,7 +14,7 @@ const HeroScreen = () => {
   return (
     <Box className="relative content-center">
       <video
-        className="absolute inset-0"
+        className="absolute inset-0 w-full h-full object-cover pb-0"
         src="/seasoning.mp4"
         autoPlay
         loop
@@ -24,8 +24,8 @@ const HeroScreen = () => {
         <Stack direction="column" align="center" justify="center">
           <Stack spacing={4} direction="column" align="center" marginTop={10}>
             <h1 className="text-9xl font-sans text-white z-10">Happy Tummy</h1>
-            <p className="text-5xl font-sans text-white m-4 z-10">
-              What are you waiting for?
+            <p className="text-4xl font-sans text-white m-4 z-10">
+              What recipes are we using today?{" "}
             </p>
           </Stack>
           <Stack spacing={4} direction="row" align="center">

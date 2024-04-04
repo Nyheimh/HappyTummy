@@ -8,8 +8,7 @@ import {
   Image,
   Text,
   Stack,
-  Flex,
-  SimpleGrid,
+  Button,
 } from "@chakra-ui/react";
 import RecipeBadge from "./RecipeBadge";
 import { FaTiktok, FaInstagram } from "react-icons/fa";
@@ -39,79 +38,77 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
   };
 
   const truncatedName =
-    recipe.name.length > 5 ? `${recipe.name.slice(0, 15)}...` : recipe.name;
+    recipe.name.length > 20 ? `${recipe.name.slice(0, 20)}...` : recipe.name;
   const truncatedKeyIngredients =
-    recipe.keyIngredients.length > 100
-      ? `${recipe.keyIngredients.slice(0, 5)}...`
+    recipe.keyIngredients.length > 40
+      ? `${recipe.keyIngredients.slice(0, 40)}...`
       : recipe.keyIngredients;
 
   return (
     <ChakraProvider>
-      <Flex flexWrap="wrap">
-        <Card maxW="sm" boxShadow="2xl">
-          <Image src="/jg.jpg" alt={recipe.name} h="350px" objectFit="fill" />
-          <CardBody maxH="491px">
-            <Stack spacing="3">
-              <Box
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Heading size="md">
-                  {showFullText ? recipe.name : truncatedName}
-                </Heading>
-                {typeof recipe.tiktokLink === "string" && (
-                  <a
-                    href={String(recipe.tiktokLink)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaTiktok color="#000" size={24} />
-                  </a>
-                )}
-                {typeof recipe.instagramLink === "string" && (
-                  <a
-                    href={String(recipe.instagramLink || "/")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram color="#000" size={24} />
-                  </a>
-                )}
-              </Box>
-              <Text>
-                {showFullText ? recipe.keyIngredients : truncatedKeyIngredients}
-              </Text>
-              <Box>
-                {Array(5)
-                  .fill("")
-                  .map((_, i) => (
-                    <StarIcon
-                      key={i}
-                      color={i < recipe.rating ? "teal.500" : "gray.300"}
-                    />
-                  ))}
-              </Box>
-              <Stack direction="row" align="center">
-                {recipe.badges.map((badge, index) => (
-                  <RecipeBadge
-                    key={index}
-                    text={badge.text}
-                    colorScheme={badge.colorScheme}
+      <Card boxShadow="2xl" marginBottom="20px">
+        <Image src="/jg.jpg" alt={recipe.name} h="350px" objectFit="fill" />
+        <CardBody maxH="491px">
+          <Stack spacing="3">
+            <Box
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Heading size="md">
+                {showFullText ? recipe.name : truncatedName}
+              </Heading>
+              {typeof recipe.tiktokLink === "string" && (
+                <a
+                  href={String(recipe.tiktokLink)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTiktok color="#000" size={24} />
+                </a>
+              )}
+              {typeof recipe.instagramLink === "string" && (
+                <a
+                  href={String(recipe.instagramLink || "/")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram color="#000" size={24} />
+                </a>
+              )}
+            </Box>
+            <Text>
+              {showFullText ? recipe.keyIngredients : truncatedKeyIngredients}
+            </Text>
+            <Box>
+              {Array(5)
+                .fill("")
+                .map((_, i) => (
+                  <StarIcon
+                    key={i}
+                    color={i < recipe.rating ? "yellow.500" : "gray.300"}
                   />
                 ))}
-              </Stack>
-              {recipe.name.length > 50 || recipe.keyIngredients.length > 100 ? (
-                <button onClick={toggleFullText}>
-                  {showFullText ? "Show Less" : "Show More"}
-                </button>
-              ) : null}
+            </Box>
+            <Stack direction="row" align="center">
+              {recipe.badges.map((badge, index) => (
+                <RecipeBadge
+                  key={index}
+                  text={badge.text}
+                  colorScheme={badge.colorScheme}
+                />
+              ))}
             </Stack>
-          </CardBody>
-        </Card>
-      </Flex>
+            {recipe.name.length > 20 || recipe.keyIngredients.length > 41 ? (
+              <Button colorScheme="gray" onClick={toggleFullText} size="md">
+                {showFullText ? "Show Less" : "Show More"}
+              </Button>
+            ) : null}
+          </Stack>
+        </CardBody>
+      </Card>
     </ChakraProvider>
   );
 };
