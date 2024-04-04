@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import "./globals.css";
 import Header from "./lib/Header";
 import React from "react";
+import Footer from "./lib/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );

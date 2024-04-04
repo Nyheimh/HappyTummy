@@ -26,43 +26,43 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "Lemon Pepper Wings",
-      keyIngredients: "Broccoli, Carrot, Spinach",
+      keyIngredients: "Lemon Pepper, Chicken Wings",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C2uysBQuuMi/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Airfryer", colorScheme: "brown" },
+        { text: "Air fryer", colorScheme: "linkedin" },
         { text: "Chicken", colorScheme: "yellow" },
       ],
-      rating: 2,
+      rating: 0,
     },
     {
       id: 2,
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "Oatmeal Creme Pies",
-      keyIngredients: "Broccoli, Cheese, Potatoes",
+      keyIngredients: "Oatmeal",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C36PRTRslBZ/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
         { text: "Dessert", colorScheme: "pink" },
-        { text: "Breakfast", colorScheme: "yellow" },
+        { text: "Dairy", colorScheme: "telegram" },
       ],
-      rating: 5,
+      rating: 0,
     },
     {
       id: 3,
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "General Tso Chicken",
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Chicken breast",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C0_-j33upYD/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
         { text: "Chicken", colorScheme: "yellow" },
-        { text: "Breakfast", colorScheme: "yellow" },
+        { text: "Breakfast", colorScheme: "orange" },
       ],
       rating: 0,
     },
@@ -71,14 +71,11 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "Filet o Fish",
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Cod, deep fryer",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C33MY8ppxxZ/?igsh=ZDE1MWVjZGVmZQ==",
-      badges: [
-        { text: "Fish", colorScheme: "cyan" },
-        { text: "Breakfast", colorScheme: "yellow" },
-      ],
+      badges: [{ text: "Fish", colorScheme: "blue" }],
       rating: 0,
     },
     {
@@ -86,13 +83,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "Arroz con pollo",
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Rice, chicken",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C2n-_qyRksj/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
         { text: "Chicken", colorScheme: "yellow" },
-        { text: "Rice", colorScheme: "orange" },
+        { text: "Rice", colorScheme: "facebook" },
       ],
       rating: 0,
     },
@@ -101,14 +98,11 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: "Red Velvet Marble Loaf",
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "TBD",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C2uo6Xfrnsc/?igsh=ZDE1MWVjZGVmZQ==",
-      badges: [
-        { text: "Dessert", colorScheme: "pink" },
-        { text: "Rice", colorScheme: "orange" },
-      ],
+      badges: [{ text: "Dessert", colorScheme: "pink" }],
       rating: 0,
     },
     {
@@ -116,13 +110,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `King's Hawaiian Cinnamon Rolls`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Hawaiian rolls, cinnamon",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C3IrTdBO50N/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
         { text: "Dessert", colorScheme: "pink" },
-        { text: "Bread", colorScheme: "brown" },
+        { text: "Bread", colorScheme: "purple" },
       ],
       rating: 0,
     },
@@ -131,13 +125,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Cheesy Beef Rollups`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Cheese, ground meat, tortilla",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C3dPHS4glua/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Dairy", colorScheme: "pink" },
-        { text: "Meat", colorScheme: "brown" },
+        { text: "Dairy", colorScheme: "gray" },
+        { text: "Meat", colorScheme: "red" },
       ],
       rating: 0,
     },
@@ -146,13 +140,14 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Jerk Chicken Fried Rice`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Jerk sauce, rice, chicken",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C3G2PCROF7y/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Dairy", colorScheme: "pink" },
-        { text: "Meat", colorScheme: "brown" },
+        { text: "Rice", colorScheme: "facebook" },
+        { text: "Chicken", colorScheme: "yellow" },
+        { text: "Spicy", colorScheme: "red" },
       ],
       rating: 0,
     },
@@ -161,13 +156,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Creamy Lemon Shrimp`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Heavy whipping cream, lemon, shrimp",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C3Q9uwzP108/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Dairy", colorScheme: "pink" },
-        { text: "Meat", colorScheme: "brown" },
+        { text: "Seafood", colorScheme: "blue" },
+        { text: "Dairy", colorScheme: "gray" },
       ],
       rating: 0,
     },
@@ -191,13 +186,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Al Pastor Chicken`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Chicken",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C22z8ApvFD5/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Dairy", colorScheme: "pink" },
-        { text: "Meat", colorScheme: "brown" },
+        { text: "Chicken", colorScheme: "yellow" },
+        // { text: "Meat", colorScheme: "brown" },
       ],
       rating: 0,
     },
@@ -206,13 +201,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Tuscan Salmon Penne`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Salmon, Pasta, Heavy whipping cream",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C23GA9iu0JC/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Dairy", colorScheme: "pink" },
-        { text: "Meat", colorScheme: "brown" },
+        { text: "Seafood", colorScheme: "blue" },
+        { text: "Dairy", colorScheme: "facebook" },
       ],
       rating: 0,
     },
@@ -221,13 +216,13 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Chicken Thigh Cajun Pasta`,
-      keyIngredients: "Banana, Milk/Milk Alternate, Bread",
+      keyIngredients: "Heavy whipping cream, chicken, cajun seasoning, pasta ",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C2h9LU2gcdO/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Dairy", colorScheme: "pink" },
-        { text: "Meat", colorScheme: "brown" },
+        { text: "Dairy", colorScheme: "facebook" },
+        { text: "Chicken", colorScheme: "yellow" },
       ],
       rating: 0,
     },
@@ -241,7 +236,7 @@ const useAdultRecipeData = (): RecipeData => {
       instagramLink:
         "https://www.instagram.com/reel/C4_ypRuNKoL/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Slow Cooker", colorScheme: "gray" },
+        { text: "Slow Cooker", colorScheme: "telegram" },
         { text: "Meat", colorScheme: "brown" },
       ],
       rating: 0,
@@ -251,13 +246,14 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Creamy Garlic Herb Cajun Chicken`,
-      keyIngredients: "Chicken Thighs",
+      keyIngredients:
+        "Chicken Thighs, heavy whipping cream, garlic, cajun seasoning",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C4NsREYo0pr/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Chicken", colorScheme: "gray" },
-        { text: "Dairy", colorScheme: "brown" },
+        { text: "Chicken", colorScheme: "yellow" },
+        { text: "Dairy", colorScheme: "facebook" },
       ],
       rating: 0,
     },
@@ -271,8 +267,8 @@ const useAdultRecipeData = (): RecipeData => {
       instagramLink:
         "https://www.instagram.com/reel/C4tRTrRoZjY/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Desserts", colorScheme: "gray" },
-        { text: "Chocolate", colorScheme: "brown" },
+        { text: "Desserts", colorScheme: "pink" },
+        // { text: "Chocolate", colorScheme: "brown" },
       ],
       rating: 0,
     },
@@ -281,11 +277,14 @@ const useAdultRecipeData = (): RecipeData => {
       imageUrl:
         "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
       name: `Garlic Parmesan Chicken Skewers`,
-      keyIngredients: "Garlic, Parm, Chicken",
+      keyIngredients: "Garlic, Parmesan, Chicken",
       tiktokLink: undefined,
       instagramLink:
         "https://www.instagram.com/reel/C4tRTrRoZjY/?igsh=ZDE1MWVjZGVmZQ==",
-      badges: [{ text: "Chicken", colorScheme: "gray" }],
+      badges: [
+        { text: "Chicken", colorScheme: "yellow" },
+        { text: "Dairy", colorScheme: "gray" },
+      ],
       rating: 0,
     },
     {
@@ -298,8 +297,8 @@ const useAdultRecipeData = (): RecipeData => {
       instagramLink:
         "https://www.instagram.com/reel/C4v449Hv4Oh/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Chicken", colorScheme: "gray" },
-        { text: "Fast Food Dupe", colorScheme: "yellow" },
+        { text: "Meat", colorScheme: "brown" },
+        { text: "Fast Food Dupe", colorScheme: "twitter" },
       ],
       rating: 0,
     },
@@ -313,8 +312,8 @@ const useAdultRecipeData = (): RecipeData => {
       instagramLink:
         "https://www.instagram.com/reel/C3vgukPPqXw/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
-        { text: "Rice", colorScheme: "gray" },
-        { text: "Fast Food Dupe", colorScheme: "yellow" },
+        { text: "Rice", colorScheme: "facebook" },
+        { text: "Fast Food Dupe", colorScheme: "twitter" },
       ],
       rating: 0,
     },
@@ -341,7 +340,7 @@ const useAdultRecipeData = (): RecipeData => {
         "https://www.instagram.com/reel/C4qVl5COuWx/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
         { text: "Chicken", colorScheme: "gray" },
-        { text: "Veggies", colorScheme: "brown" },
+        { text: "Veggies", colorScheme: "green" },
       ],
       rating: 0,
     },
