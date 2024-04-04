@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ChakraProvider,
   Box,
@@ -32,17 +32,24 @@ interface RecipeCardProps {
 }
 
 const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
+  const [showFullText, setShowFullText] = useState(false);
+
+  const toggleFullText = () => {
+    setShowFullText(!showFullText);
+  };
+
+  const truncatedName =
+    recipe.name.length > 5 ? `${recipe.name.slice(0, 15)}...` : recipe.name;
+  const truncatedKeyIngredients =
+    recipe.keyIngredients.length > 100
+      ? `${recipe.keyIngredients.slice(0, 5)}...`
+      : recipe.keyIngredients;
+
   return (
     <ChakraProvider>
       <Flex flexWrap="wrap">
         <Card maxW="sm" boxShadow="2xl">
-          <Image
-            src={recipe.imageUrl}
-            alt={recipe.name}
-            borderRadius="lg"
-            h="350px"
-            objectFit="fill"
-          />
+          <Image src="/jg.jpg" alt={recipe.name} h="350px" objectFit="fill" />
           <CardBody maxH="491px">
             <Stack spacing="3">
               <Box
@@ -52,7 +59,9 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
                   justifyContent: "space-between",
                 }}
               >
-                <Heading size="md">{recipe.name}</Heading>
+                <Heading size="md">
+                  {showFullText ? recipe.name : truncatedName}
+                </Heading>
                 {typeof recipe.tiktokLink === "string" && (
                   <a
                     href={String(recipe.tiktokLink)}
@@ -72,7 +81,9 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
                   </a>
                 )}
               </Box>
-              <Text>{recipe.keyIngredients}</Text>
+              <Text>
+                {showFullText ? recipe.keyIngredients : truncatedKeyIngredients}
+              </Text>
               <Box>
                 {Array(5)
                   .fill("")
@@ -92,6 +103,11 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
                   />
                 ))}
               </Stack>
+              {recipe.name.length > 50 || recipe.keyIngredients.length > 100 ? (
+                <button onClick={toggleFullText}>
+                  {showFullText ? "Show Less" : "Show More"}
+                </button>
+              ) : null}
             </Stack>
           </CardBody>
         </Card>
