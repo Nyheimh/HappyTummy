@@ -17,14 +17,18 @@ const Page: React.FC = () => {
     useAdultRecipeData();
 
   const [sortOption, setSortOption] = useState("A-Z");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedBadge, setSelectedBadge] = useState<string[]>([]);
 
   const handelSortChange = (option: any) => {
     setSortOption(option);
   };
 
-  const handleCategoryClick = (category: string) => {
-    setSelectedCategory(category);
+  const handleBadgeClick = (badge: string) => {
+    setSelectedBadge((prevBadges) =>
+      prevBadges.includes(badge)
+        ? prevBadges.filter((selectedBadge) => selectedBadge !== badge)
+        : [...prevBadges, badge]
+    );
   };
 
   const sortedRecipes = [...filteredRecipes].sort((a, b) => {
@@ -43,13 +47,25 @@ const Page: React.FC = () => {
     }
   });
 
-  const filteredRecipesByCategory = selectedCategory
-    ? sortedRecipes.filter((recipe) =>
-        recipe.badges.some(
-          (badge) => badge.text.toLowerCase() === selectedCategory.toLowerCase()
+  const filteredRecipesByBadges =
+    selectedBadge.length > 0
+      ? sortedRecipes.filter((recipe) =>
+          selectedBadge.every((selectedBadge) =>
+            recipe.badges.some(
+              (badge) =>
+                badge.text.toLowerCase() === selectedBadge.toLowerCase()
+            )
+          )
         )
+      : sortedRecipes;
+
+  const availableBadges = Array.from(
+    new Set(
+      filteredRecipes.flatMap((recipe) =>
+        recipe.badges.map((badge) => badge.text)
       )
-    : sortedRecipes;
+    )
+  );
 
   return (
     <Box>
@@ -86,25 +102,27 @@ const Page: React.FC = () => {
         </Select>
       </Box>
 
-      <Stack spacing="3" direction="row" align="center">
-        <Button onClick={() => handleCategoryClick("Chicken")}>Chicken</Button>
-        <Button onClick={() => handleCategoryClick("Rice")}>Rice</Button>
-        <Button onClick={() => handleCategoryClick("Seafood")}>Seafood</Button>
-        <Button onClick={() => handleCategoryClick("Meat")}>Meat</Button>
-        <Button onClick={() => handleCategoryClick("Dairy")}>Dairy</Button>
-        <Button onClick={() => handleCategoryClick("Veggies")}>Veggies</Button>
-        <Button onClick={() => handleCategoryClick("Desserts")}>
-          Desserts
-        </Button>
-        <Button onClick={() => handleCategoryClick("Breakfast")}>
-          Breakfast
-        </Button>
+      <Stack
+        spacing="3"
+        direction="row"
+        align="center"
+        justifyContent="center"
+        mb="20px"
+      >
+        <Button onClick={() => handleBadgeClick("Chicken")}>Chicken</Button>
+        <Button onClick={() => handleBadgeClick("Rice")}>Rice</Button>
+        <Button onClick={() => handleBadgeClick("Seafood")}>Seafood</Button>
+        <Button onClick={() => handleBadgeClick("Meat")}>Meat</Button>
+        <Button onClick={() => handleBadgeClick("Dairy")}>Dairy</Button>
+        <Button onClick={() => handleBadgeClick("Veggies")}>Veggies</Button>
+        <Button onClick={() => handleBadgeClick("Desserts")}>Desserts</Button>
+        <Button onClick={() => handleBadgeClick("Breakfast")}>Breakfast</Button>
       </Stack>
 
       <Box style={{ display: "flex", justifyContent: "space-evenly" }}>
         <Stack spacing="3" direction="row" align="center">
           <SimpleGrid columns={3} spacing={5}>
-            {filteredRecipesByCategory.map((adultRecipe) => (
+            {filteredRecipesByBadges.map((adultRecipe) => (
               <RecipeCard key={adultRecipe.id} recipe={adultRecipe} />
             ))}
           </SimpleGrid>
