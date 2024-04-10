@@ -1,7 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import RecipeCard from "../ui/RecipeCard";
-import { Box, Input, Stack, SimpleGrid, Select, Badge } from "@chakra-ui/react";
+import {
+  Box,
+  Input,
+  Stack,
+  SimpleGrid,
+  Select,
+  Badge,
+  Button,
+} from "@chakra-ui/react";
 import useAdultRecipeData from "./AdultRecipeData";
 
 const Page: React.FC = () => {
@@ -9,9 +17,14 @@ const Page: React.FC = () => {
     useAdultRecipeData();
 
   const [sortOption, setSortOption] = useState("A-Z");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const handelSortChange = (option: any) => {
     setSortOption(option);
+  };
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
   };
 
   const sortedRecipes = [...filteredRecipes].sort((a, b) => {
@@ -29,6 +42,14 @@ const Page: React.FC = () => {
         return a.name.localeCompare(b.name);
     }
   });
+
+  const filteredRecipesByCategory = selectedCategory
+    ? sortedRecipes.filter((recipe) =>
+        recipe.badges.some(
+          (badge) => badge.text.toLowerCase() === selectedCategory.toLowerCase()
+        )
+      )
+    : sortedRecipes;
 
   return (
     <Box>
@@ -64,10 +85,26 @@ const Page: React.FC = () => {
           <option value="1-5">Favorite 😋</option>
         </Select>
       </Box>
+
+      <Stack spacing="3" direction="row" align="center">
+        <Button onClick={() => handleCategoryClick("Chicken")}>Chicken</Button>
+        <Button onClick={() => handleCategoryClick("Rice")}>Rice</Button>
+        <Button onClick={() => handleCategoryClick("Seafood")}>Seafood</Button>
+        <Button onClick={() => handleCategoryClick("Meat")}>Meat</Button>
+        <Button onClick={() => handleCategoryClick("Dairy")}>Dairy</Button>
+        <Button onClick={() => handleCategoryClick("Veggies")}>Veggies</Button>
+        <Button onClick={() => handleCategoryClick("Desserts")}>
+          Desserts
+        </Button>
+        <Button onClick={() => handleCategoryClick("Breakfast")}>
+          Breakfast
+        </Button>
+      </Stack>
+
       <Box style={{ display: "flex", justifyContent: "space-evenly" }}>
         <Stack spacing="3" direction="row" align="center">
           <SimpleGrid columns={3} spacing={5}>
-            {sortedRecipes.map((adultRecipe) => (
+            {filteredRecipesByCategory.map((adultRecipe) => (
               <RecipeCard key={adultRecipe.id} recipe={adultRecipe} />
             ))}
           </SimpleGrid>
