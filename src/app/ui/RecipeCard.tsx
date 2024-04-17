@@ -9,6 +9,12 @@ import {
   Text,
   Stack,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import RecipeBadge from "./RecipeBadge";
 import { FaTiktok, FaInstagram } from "react-icons/fa";
@@ -32,9 +38,18 @@ interface RecipeCardProps {
 
 const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
   const [showFullText, setShowFullText] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleFullText = () => {
     setShowFullText(!showFullText);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   const truncatedName =
@@ -47,8 +62,13 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
   return (
     <ChakraProvider>
       <Card boxShadow="2xl" marginBottom="20px">
-        <Image src="/jg.jpg" alt={recipe.name} h="350px" objectFit="fill" />
-        <CardBody maxH="491px">
+        <Image
+          src="/jg.jpg"
+          alt={recipe.name}
+          height="350px"
+          objectFit="fill"
+        />
+        <CardBody>
           <Stack spacing="3">
             <Box
               style={{
@@ -102,10 +122,18 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
               ))}
             </Stack>
             {recipe.name.length > 20 || recipe.keyIngredients.length > 41 ? (
-              <Button colorScheme="gray" onClick={toggleFullText} size="md">
+              <Button colorScheme="gray" onClick={openModal} size="md">
                 {showFullText ? "Show Less" : "Show More"}
               </Button>
             ) : null}
+            <Modal isOpen={isModalOpen} onClose={closeModal} size="lg">
+              <ModalOverlay />
+              <ModalContent width="400px" height="200px">
+                <ModalHeader>{recipe.name}</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>{recipe.keyIngredients}</ModalBody>
+              </ModalContent>
+            </Modal>
           </Stack>
         </CardBody>
       </Card>
