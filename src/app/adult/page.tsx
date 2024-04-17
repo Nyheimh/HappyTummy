@@ -86,7 +86,6 @@ const Page: React.FC = () => {
             display: "flex",
             borderRadius: 100,
             width: 600,
-
             marginRight: 10,
           }}
         />
@@ -109,14 +108,14 @@ const Page: React.FC = () => {
         justifyContent="center"
         mb="20px"
       >
+        <Button onClick={() => handleBadgeClick("Breakfast")}>Breakfast</Button>
         <Button onClick={() => handleBadgeClick("Chicken")}>Chicken</Button>
+        <Button onClick={() => handleBadgeClick("Dairy")}>Dairy</Button>
+        <Button onClick={() => handleBadgeClick("Desserts")}>Desserts</Button>
+        <Button onClick={() => handleBadgeClick("Meat")}>Meat</Button>
         <Button onClick={() => handleBadgeClick("Rice")}>Rice</Button>
         <Button onClick={() => handleBadgeClick("Seafood")}>Seafood</Button>
-        <Button onClick={() => handleBadgeClick("Meat")}>Meat</Button>
-        <Button onClick={() => handleBadgeClick("Dairy")}>Dairy</Button>
         <Button onClick={() => handleBadgeClick("Veggies")}>Veggies</Button>
-        <Button onClick={() => handleBadgeClick("Desserts")}>Desserts</Button>
-        <Button onClick={() => handleBadgeClick("Breakfast")}>Breakfast</Button>
       </Stack>
 
       <Box style={{ display: "flex", justifyContent: "space-evenly" }}>
