@@ -405,6 +405,90 @@ const useAdultRecipeData = (): RecipeData => {
       badges: [{ text: "Chips", colorScheme: "green" }],
       rating: 0,
     },
+    {
+      id: 28,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Marry Me Chicken Pasta`,
+      keyIngredients: "Pasta",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C6hD9moObkr/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Pasta", colorScheme: "gray" }],
+      rating: 0,
+    },
+    {
+      id: 28,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Smores Brownies`,
+      keyIngredients: "Graham Cracker & Chocolate",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C7wxRFYp-e0/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Desserts", colorScheme: "pink" }],
+      rating: 0,
+    },
+    {
+      id: 29,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Sourdough Discard Garlic Bread`,
+      keyIngredients: "Sourdough",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C6eY4VGx_KC/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Bread", colorScheme: "yellow" }],
+      rating: 0,
+    },
+    {
+      id: 30,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Lemon Parmesan One-Pan Pasta`,
+      keyIngredients: "Lemon, Parmesan, Pasta, and Chicken",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C6eY4VGx_KC/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Pasta", colorScheme: "grey" }],
+      rating: 0,
+    },
+    {
+      id: 31,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Fruit Leather`,
+      keyIngredients: "Fruit",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C7haKINJz_f/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Desserts", colorScheme: "pink" }],
+      rating: 0,
+    },
+    {
+      id: 32,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Creamy Chicken Loaded Fries`,
+      keyIngredients: "Potatoes",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C7CXdpRIuKu/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Chicken", colorScheme: "yellow" }],
+      rating: 0,
+    },
+    {
+      id: 33,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Watermelon Shaved Ice`,
+      keyIngredients: "Watermelon",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C7SWRSyum20/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Watermelon", colorScheme: "yellow" }],
+      rating: 0,
+    },
   ]);
 
   const [searchFilter, setSearchFilter] = useState<string>("");
