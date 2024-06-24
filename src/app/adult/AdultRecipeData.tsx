@@ -28,6 +28,7 @@ const useAdultRecipeData = (): RecipeData => {
       name: "Lemon Pepper Wings",
       keyIngredients: "Lemon Pepper, Chicken Wings",
       tiktokLink: undefined,
+      // https://www.instagram.com/lakisha_cooks4u2/
       instagramLink:
         "https://www.instagram.com/reel/C2uysBQuuMi/?igsh=ZDE1MWVjZGVmZQ==",
       badges: [
@@ -342,6 +343,66 @@ const useAdultRecipeData = (): RecipeData => {
         { text: "Chicken", colorScheme: "gray" },
         { text: "Veggies", colorScheme: "green" },
       ],
+      rating: 0,
+    },
+    {
+      id: 23,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Tomato Chicken Thighs`,
+      keyIngredients: "Tomato & Chicken Thighs",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C7mbYufJmeg/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Chicken", colorScheme: "gray" }],
+      rating: 0,
+    },
+    {
+      id: 24,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Lasagna Soup`,
+      keyIngredients: "Pasta",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C0NM7DALOe1/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Pasta", colorScheme: "gray" }],
+      rating: 0,
+    },
+    {
+      id: 25,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Gummy Worms`,
+      keyIngredients: "Fruit Juice and Gelatin",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C5a_VLlrAPo/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Desserts", colorScheme: "pink" }],
+      rating: 0,
+    },
+    {
+      id: 26,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Jack In The Box Dupe Tacos`,
+      keyIngredients: "Ground Meat",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C8GEGTlPh8K/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Meat", colorScheme: "red" }],
+      rating: 0,
+    },
+    {
+      id: 27,
+      imageUrl:
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      name: `Homeade Frito Chips`,
+      keyIngredients: "Pasta",
+      tiktokLink: undefined,
+      instagramLink:
+        "https://www.instagram.com/reel/C6yzta9uW9s/?igsh=MWQ1ZGUxMzBkMA==",
+      badges: [{ text: "Chips", colorScheme: "green" }],
       rating: 0,
     },
   ]);
